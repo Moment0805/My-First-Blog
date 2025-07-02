@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/no-unescaped-entities
 "use client";
 import React, { useEffect } from 'react';
 import Header from '../component/Header';
