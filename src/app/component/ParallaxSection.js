@@ -10,33 +10,29 @@ const ParallaxSection = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <section
-      className="relative w-full h-screen text-white"
+      className="relative w-full h-screen text-white flex items-center"
       style={{
         backgroundImage: "url('/images/slide (1).jpg')",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
-        transform: `translateY(${scrollY * 0.3}px)`, 
+        transform: `translateY(${scrollY * 0.3}px)`,
       }}
     >
-      <main className="space-y-1 mt-10 py-4 px-10 sm:items-start rounded-xl backdrop-blur-md w-full">
-        <h1 className="text-2xl font-bold">Hello!</h1>
-        <p className="text-2xl font-bold">I Am Abdul Momoh.</p>
-        <div>
-          <p className="text-xs font-sans text-left">
-            I'm a Web Developer with extensive experience for over 3 years. My expertise is to create, design websites, build software applications, and more...
-          </p>
-          <button className="border-2 p-2 mt-4 rounded-3xl hover:bg-gray-300 transition-colors duration-300">
-            <a>See Portfolio</a>
-          </button>
-        </div>
+      <main className="bg-black/50 backdrop-blur-sm rounded-xl px-8 py-6 sm:ml-10 max-w-xl">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2">Hello!</h1>
+        <p className="text-2xl sm:text-3xl font-semibold mb-4">I'm Emmanuel Adeogo.</p>
+        <p className="text-sm sm:text-base leading-relaxed text-gray-100">
+          A frontend developer focused on building scalable, user-friendly web interfaces and experiences. I specialize in React, design systems, and bringing ideas to life with clean and modern UI.
+        </p>
+        <button className="mt-6 border-2 border-white text-white px-5 py-2 rounded-3xl hover:bg-white hover:text-black transition duration-300">
+          <a href="https://instagram.com/emmanuelokedele">See Portfolio</a>
+        </button>
       </main>
     </section>
   );
